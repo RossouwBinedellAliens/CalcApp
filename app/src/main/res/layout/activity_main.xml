@@ -34,40 +34,44 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
 
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
-                android:id="@+id/radioGroup">
+                android:id="@+id/activity_main_radioGroup">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Add"
-
+                    android:textColor="@color/fontColour"
                     android:textSize="20sp"
-                    android:id="@+id/radioButton" />
+                    android:id="@+id/activity_main_radioButton_add" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Subtract"
                     android:textSize="20sp"
-                    android:id="@+id/radioButton2" />
+                    android:textColor="@color/fontColour"
+                    android:id="@+id/activity_main_radioButton_subtract" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Multiply"
+                    android:textColor="@color/fontColour"
                     android:textSize="20sp"
-                    android:id="@+id/radioButton3" />
+                    android:id="@+id/activity_main_radioButton_multiply" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Divide"
+                    android:textColor="@color/fontColour"
                     android:textSize="20sp"
-                    android:id="@+id/radioButton4" />
+                    android:id="@+id/activity_main_radioButton_divide" />
             </RadioGroup>
 
             <GridLayout
@@ -82,15 +86,18 @@
                     android:text="First Number: "
                     android:id="@+id/textView2"
                     android:textSize="22sp"
+                    android:textColor="@color/fontColour"
                     android:layout_row="0"
-                    android:layout_column="0" />
+                    android:layout_column="0"
+                    android:paddingStart="28dp"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/editText"
+                    android:textColor="@color/fontColour"
+                    android:id="@+id/activity_main_firstNum"
                     android:layout_column="1"
                     android:layout_row="0" />
 
@@ -101,6 +108,7 @@
                     android:text="Second Number: "
                     android:id="@+id/textView3"
                     android:textSize="22sp"
+                    android:textColor="@color/fontColour"
                     android:layout_row="1"
                     android:layout_column="0" />
 
@@ -109,7 +117,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/editText2"
+                    android:textColor="@color/fontColour"
+                    android:id="@+id/activity_main_secondNum"
                     android:layout_column="1"
                     android:layout_row="1" />
             </GridLayout>
@@ -120,6 +129,8 @@
                 android:text="Submit"
                 android:layout_marginTop="15dp"
                 android:id="@+id/commitButton"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
                 android:textSize="30sp" />
 
             <TextView
@@ -127,15 +138,18 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Output:"
+                android:textColor="@color/fontColour"
                 android:id="@+id/textView_output_label"
                 android:textSize="20sp"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Output"
+                android:textColor="@color/fontColour"
+                android:layout_gravity="center_horizontal"
                 android:id="@+id/textView_Output"
                 android:textSize="40sp"/>
 
