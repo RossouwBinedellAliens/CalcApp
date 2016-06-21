@@ -38,33 +38,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("OnClick", "onClick: Selection: " + selection);
             EditText num1 = (EditText) findViewById(R.id.activity_main_firstNum);
             EditText num2 = (EditText) findViewById(R.id.activity_main_secondNum);
-            int total = 0;
+            double total = 0;
             if (num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty()) {
                 Toast.makeText(MainActivity.this, "Please enter a valid number!", Toast.LENGTH_SHORT).show();
             } else {
                 switch (selection) {
                     case 1:
-                        total = Integer.parseInt(num1.getText().toString()) + Integer.parseInt(num2.getText().toString());
+                        total = Double.parseDouble(num1.getText().toString()) + Double.parseDouble(num2.getText().toString());
                         break;
                     case 2:
-                        total = Integer.parseInt(num1.getText().toString()) - Integer.parseInt(num2.getText().toString());
+                        total = Double.parseDouble(num1.getText().toString()) - Double.parseDouble(num2.getText().toString());
                         break;
                     case 3:
-                        total = Integer.parseInt(num1.getText().toString()) * Integer.parseInt(num2.getText().toString());
+                        total = Double.parseDouble(num1.getText().toString()) * Double.parseDouble(num2.getText().toString());
                         break;
                     case 4:
-                        total = Integer.parseInt(num1.getText().toString()) / Integer.parseInt(num2.getText().toString());
+                        total = Double.parseDouble(num1.getText().toString()) / Double.parseDouble(num2.getText().toString());
                         break;
                     default:
                         total = -1;
                 }
                 TextView outputText = (TextView) findViewById(R.id.textView_Output);
-               //try {
-                   outputText.setText(total+"");
-               //} catch ( NullPointerException n){
-                 //  System.out.println(n.getMessage());
-               //}
-
+                if (total%1!=0)
+                    outputText.setText(String.format("%.3f", total));
+                else
+                    outputText.setText(total + "");
             }
         }
     }
