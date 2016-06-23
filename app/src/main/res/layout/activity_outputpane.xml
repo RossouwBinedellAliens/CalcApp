@@ -5,18 +5,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/textView"
-            android:textSize="25dp"
+            android:id="@+id/activity_outputPane_lastLine"
+            android:textSize="30dp"
+            android:textColor="@color/fontColour"
             android:textAlignment="viewEnd"
-            android:singleLine="false" />
+            android:singleLine="true" />
 
-    </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/activity_outputPane_allHistory"
+            android:textColor="@color/fontColourDark"
+            android:textAlignment="viewEnd"
+            android:text="First line"
+            android:maxLines="15"
+            android:singleLine="false"/>
+    </LinearLayout>
+
 </LinearLayout>

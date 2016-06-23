@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     outputText.setText(total + "");
             }
         }
+
+
     }
 
     private int getSelection() {
