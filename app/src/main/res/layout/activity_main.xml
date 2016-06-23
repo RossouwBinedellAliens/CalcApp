@@ -12,11 +12,89 @@
 
     <TabHost
         android:layout_width="match_parent"
+<<<<<<< Updated upstream
         android:layout_height="match_parent"
         android:id="@+id/tabOne"
         >
 
         <LinearLayout
+=======
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/fontColour"
+            android:id="@+id/textView_welcome"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:id="@+id/activity_main_radioGroup"
+                android:layout_row="0"
+                android:layout_column="0">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    android:textColor="@color/fontColour"
+                    android:textSize="20sp"
+                    android:id="@+id/activity_main_radioButton_add" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtract"
+                    android:textSize="20sp"
+                    android:textColor="@color/fontColour"
+                    android:id="@+id/activity_main_radioButton_subtract" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multiply"
+                    android:textColor="@color/fontColour"
+                    android:textSize="20sp"
+                    android:id="@+id/activity_main_radioButton_multiply" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Divide"
+                    android:textColor="@color/fontColour"
+                    android:textSize="20sp"
+                    android:id="@+id/activity_main_radioButton_divide" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:textColor="#ffffff"
+                android:background="@color/colorAccent"
+                android:text="History"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:id="@+id/activity_main_buttonHistory"
+                android:layout_gravity="end|center_vertical"
+                android:layout_column="2"
+                android:layout_row="0" />
+        </GridLayout>
+
+        <GridLayout
+>>>>>>> Stashed changes
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -31,6 +109,7 @@
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
+<<<<<<< Updated upstream
                 android:layout_height="match_parent">
 
                 <LinearLayout
@@ -197,5 +276,48 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+=======
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:textColor="@color/fontColour"
+                android:id="@+id/activity_main_secondNum"
+                android:layout_column="1"
+                android:layout_row="1" />
+        </GridLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Calculate"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:id="@+id/activity_main_calcButton"
+            android:background="@color/colorAccent"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Output:"
+            android:textColor="@color/fontColour"
+            android:id="@+id/textView_output_label"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Output"
+            android:textColor="@color/fontColour"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/textView_Output"
+            android:textSize="40sp"/>
+
+    </LinearLayout>
+>>>>>>> Stashed changes
 
 </RelativeLayout>

@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnSubmit = (Button) findViewById(R.id.commitButton);
         btnSubmit.setOnClickListener(this);
 
+        Button btnHistory = (Button) findViewById(R.id.activity_main_buttonHistory);
+
     }
 
     public void onClick(View v) {
