@@ -10,15 +10,9 @@
     tools:context="maintest.calcapp.MainActivity"
     android:background="@color/backGround">
 
-    <TabHost
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-<<<<<<< Updated upstream
-        android:layout_height="match_parent"
-        android:id="@+id/tabOne"
-        >
-
-        <LinearLayout
-=======
         android:layout_height="wrap_content"
         android:weightSum="1">
 
@@ -94,189 +88,45 @@
         </GridLayout>
 
         <GridLayout
->>>>>>> Stashed changes
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayout">
 
-            <TabWidget
-                android:id="@android:id/tabs"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="First Number: "
+                android:id="@+id/textView2"
+                android:textSize="22sp"
+                android:textColor="@color/fontColour"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:paddingStart="28dp"/>
+
+            <EditText
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:tabStripEnabled="false"
-                android:visibility="invisible"></TabWidget>
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:textColor="@color/fontColour"
+                android:id="@+id/activity_main_firstNum"
+                android:layout_column="1"
+                android:layout_row="0" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Second Number: "
+                android:id="@+id/textView3"
+                android:textSize="22sp"
+                android:textColor="@color/fontColour"
+                android:layout_row="1"
+                android:layout_column="0" />
+
+            <EditText
                 android:layout_width="match_parent"
-<<<<<<< Updated upstream
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Welcome!"
-                        android:textSize="60sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="@color/fontColour"
-                        android:id="@+id/textView_welcome"/>
-
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"><RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="15dp"
-                        android:id="@+id/activity_main_radioGroup"
-                        android:layout_row="0"
-                        android:layout_column="0">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Add"
-                            android:textColor="@color/fontColour"
-                            android:textSize="20sp"
-                            android:id="@+id/activity_main_radioButton_add" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Subtract"
-                            android:textSize="20sp"
-                            android:textColor="@color/fontColour"
-                            android:id="@+id/activity_main_radioButton_subtract" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Multiply"
-                            android:textColor="@color/fontColour"
-                            android:textSize="20sp"
-                            android:id="@+id/activity_main_radioButton_multiply" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Divide"
-                            android:textColor="@color/fontColour"
-                            android:textSize="20sp"
-                            android:id="@+id/activity_main_radioButton_divide" />
-                    </RadioGroup>
-
-                        <Button
-                        android:layout_width="150dp"
-                        android:layout_height="70dp"
-                        android:text="History"
-                        android:id="@+id/activity_main_buttonHistory"
-                        android:textSize="35sp"
-                        android:textStyle="bold"
-                        android:textColor="#ffffff" android:layout_gravity="center_vertical|end"
-                        android:background="@color/colorAccent"
-                            android:layout_row="0"
-                            android:layout_column="1" />
-                    </GridLayout>
-
-
-
-
-
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gridLayout">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="First Number: "
-                            android:id="@+id/textView2"
-                            android:textSize="22sp"
-                            android:textColor="@color/fontColour"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:paddingStart="28dp"/>
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:ems="10"
-                            android:textColor="#ffffff"
-                            android:id="@+id/activity_main_firstNum"
-                            android:layout_column="1"
-                            android:layout_row="0" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Second Number: "
-                            android:id="@+id/textView3"
-                            android:textSize="22sp"
-                            android:textColor="@color/fontColour"
-                            android:layout_row="1"
-                            android:layout_column="0" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:ems="10"
-                            android:textColor="#ffffff"
-                            android:id="@+id/activity_main_secondNum"
-                            android:layout_column="1"
-                            android:layout_row="1" />
-                    </GridLayout>
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:text="Calculate"
-                        android:layout_marginTop="15dp"
-                        android:id="@+id/commitButton"
-                        android:background="@color/colorAccent"
-                        android:textColor="#ffffff"
-                        android:textSize="40sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Output:"
-                        android:textColor="@color/fontColour"
-                        android:id="@+id/textView_output_label"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_horizontal" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Output"
-                        android:textColor="@color/fontColour"
-                        android:layout_gravity="center_horizontal"
-                        android:id="@+id/textView_Output"
-                        android:textSize="40sp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearLayout3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-=======
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
@@ -318,6 +168,5 @@
             android:textSize="40sp"/>
 
     </LinearLayout>
->>>>>>> Stashed changes
 
 </RelativeLayout>
